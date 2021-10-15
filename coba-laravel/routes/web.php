@@ -37,4 +37,4 @@ Route::get('/blog', [PostController::class, 'index']);
 
 //halaman single post
 
-Route::get('posts/{slug}', [PostController::class, 'show']);
+Route::get('/posts/{post::slug}', [PostController::class, 'show']);
