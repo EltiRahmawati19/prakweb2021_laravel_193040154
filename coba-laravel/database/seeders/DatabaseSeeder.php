@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use App\Models\Category;
+use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +17,59 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+
+        User::create([
+        'name' => 'Elti Rahmawati',
+        'email' => '1930401454@mail.unpas.ac.id',
+        'password' => bcrypt('12345')
+
+        ]);
+        User::create([
+            'name' => 'Fajri Khoirunnisa',
+            'email' => '1930401459@mail.unpas.ac.id',
+            'password' => bcrypt('12345')
+    
+            ]);
+
+        Category::create([
+            'name' => 'Web Programming',
+            'slug' => 'web-programming'
+        ]);
+        Category::create([
+            'name' => 'Personal',
+            'slug' => 'personal'
+        ]);
+        Post::create([
+            'title' => 'Judul Pertama',
+            'slug' => 'judul-pertama',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eum officia sunt voluptatem dolorum porro repellendus, illum laborum fugit aut iusto quidem, quod ea officiis quasi voluptatum ratione totam magni iure inventore quibusdam et, maiores repudiandae aperiam? Praesentium amet deserunt recusandae maxime exercitationem. Obcaecati suscipit delectus, nesciunt unde illo dolore sapiente expedita molestias iure voluptas blanditiis quod aspernatur pariatur explicabo quis laboriosam minima repellat, asperiores provident consequuntur cum ipsam harum? Id delectus eaque repudiandae ullam. Officia molestiae consequuntur iste officiis enim dolore voluptatem nostrum, libero rerum eius velit obcaecati ab alias recusandae illo quae! Quidem ex beatae suscipit repudiandae dolore.',
+            'category_id' => 1,
+            'user_id' => 1
+        ]);
+        Post::create([
+            'title' => 'Judul Ke Dua',
+            'slug' => 'judul-ke-dua',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eum officia sunt voluptatem dolorum porro repellendus, illum laborum fugit aut iusto quidem, quod ea officiis quasi voluptatum ratione totam magni iure inventore quibusdam et, maiores repudiandae aperiam? Praesentium amet deserunt recusandae maxime exercitationem. Obcaecati suscipit delectus, nesciunt unde illo dolore sapiente expedita molestias iure voluptas blanditiis quod aspernatur pariatur explicabo quis laboriosam minima repellat, asperiores provident consequuntur cum ipsam harum? Id delectus eaque repudiandae ullam. Officia molestiae consequuntur iste officiis enim dolore voluptatem nostrum, libero rerum eius velit obcaecati ab alias recusandae illo quae! Quidem ex beatae suscipit repudiandae dolore.',
+            'category_id' => 1,
+            'user_id' => 1
+        ]);
+        Post::create([
+            'title' => 'Judul Ke Tiga',
+            'slug' => 'judul-ke-tiga',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eum officia sunt voluptatem dolorum porro repellendus, illum laborum fugit aut iusto quidem, quod ea officiis quasi voluptatum ratione totam magni iure inventore quibusdam et, maiores repudiandae aperiam? Praesentium amet deserunt recusandae maxime exercitationem. Obcaecati suscipit delectus, nesciunt unde illo dolore sapiente expedita molestias iure voluptas blanditiis quod aspernatur pariatur explicabo quis laboriosam minima repellat, asperiores provident consequuntur cum ipsam harum? Id delectus eaque repudiandae ullam. Officia molestiae consequuntur iste officiis enim dolore voluptatem nostrum, libero rerum eius velit obcaecati ab alias recusandae illo quae! Quidem ex beatae suscipit repudiandae dolore.',
+            'category_id' => 2,
+            'user_id' => 1
+        ]);
+        Post::create([
+            'title' => 'Judul Ke Empat',
+            'slug' => 'judul-ke-empat',
+            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eum officia sunt voluptatem dolorum porro repellendus, illum laborum fugit aut iusto quidem, quod ea officiis quasi voluptatum ratione totam magni iure inventore quibusdam et, maiores repudiandae aperiam? Praesentium amet deserunt recusandae maxime exercitationem. Obcaecati suscipit delectus, nesciunt unde illo dolore sapiente expedita molestias iure voluptas blanditiis quod aspernatur pariatur explicabo quis laboriosam minima repellat, asperiores provident consequuntur cum ipsam harum? Id delectus eaque repudiandae ullam. Officia molestiae consequuntur iste officiis enim dolore voluptatem nostrum, libero rerum eius velit obcaecati ab alias recusandae illo quae! Quidem ex beatae suscipit repudiandae dolore.',
+            'category_id' => 2,
+            'user_id' => 2
+        ]);
     }
 }
