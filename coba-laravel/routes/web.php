@@ -20,13 +20,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('Home', [
-        "title" => "Home"
+        "title" => "Home",
+        "active" => 'home'
     ]);
 });
 
 Route::get('/about', function () {
     return view('About', [
         "title" => "About",
+        "active" => 'about',
         "name" => "Elti",
         "email" => "193040154@mail.unpas.ac.id",
         "image" => "193040154.jpg"
@@ -57,9 +59,3 @@ Route::get('/categories/{category:slug}', function(Category $category) {
     ]);
 });
 
-Route::get('/authors/{author:username}', function (User $author) {
-    return view('posts', [
-        'title' => "Post By Author : $author->name",
-        'posts' => $author->posts->load('category','author')
-    ]);
-});
