@@ -5,6 +5,15 @@
   <div class="col-lg-5">
     <main class="form-registration">
       <h1 class="h3 mb-3 fw-normal text-center">Registration Form</h1>
+      {{-- @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif --}}
       <form action="/register" method="post">
         @csrf
         <div class="form-floating">
